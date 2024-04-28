@@ -1,0 +1,47 @@
+﻿@if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+{
+    <div class="alert alert-success">
+        <p>@ViewBag.SuccessMessage</p>
+    </div>
+}
+<link rel="stylesheet" href="~/css/product.css">
+<link rel="shortcut icon" href="~/img/icoooo.png" type="icon" /> 
+@model Product
+<form method ="post" enctype="multipart/form-data">
+<div id="content-wrapper" >
+		
+
+		<div class="column">
+			<img id=featured src="~/img/fontoic.png">
+
+			<div id="slide-wrapper" >
+
+				<div id="slider">
+					<img class="thumbnail active" src="@Model.imgSrs">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="column">
+			<h1 class="title1">@Model.Name</h1>
+			<hr>
+			
+
+			<p class="description" >@Model.Description
+				<br> 
+
+			</p>
+
+            <h3 class="price">@Model.Price $</h3>
+			
+
+
+			<a class="pay"  href="#">تحميل</a>
+
+
+
+		</div>
+
+	</div>
+	</form>
